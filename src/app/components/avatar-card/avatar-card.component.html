@@ -1,10 +1,10 @@
 <div class="card-avatar">
     <img class="avatar-thumbnail" [src]="user.avatar_url" alt="avatar do usuário">
     <div class="info-card">
-        <p>{{user.login}}</p>
+        <h3 class="user-login">{{user.login}}</h3>
         <div class="card-actions">
-            <p class="action" (click)="openModalInfo(user)">simple</p>
-            <p class="action">full</p>
+            <p class="action" (click)="openModalInfo(user)">Descrição Breve</p>
+            <p class="action">Descrição Completa</p>
         </div>
     </div>
 </div>

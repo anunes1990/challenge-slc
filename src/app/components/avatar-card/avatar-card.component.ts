@@ -23,12 +23,16 @@ export class AvatarCardComponent implements OnInit {
 
   public async openModalInfo(user: any) {
     try {
-      //const resp = await this.apiService.getGeneric(`https://api.github.com/users/${user.login}`);
-      this.userInfo = this.mockService.user;
+      const resp = await this.apiService.getGeneric(`https://api.github.com/users/${user.login}`);
+      this.userInfo = resp;
       setTimeout(() => {
         $("#dialog-user")[0].showModal();
       }, 100);
     } catch (error) {
+      this.userInfo = this.mockService;
+      setTimeout(() => {
+        $("#dialog-user")[0].showModal();
+      }, 100);
       console.error("ERROR GET USERS > ", error)
     }
   }

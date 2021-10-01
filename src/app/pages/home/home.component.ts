@@ -18,10 +18,11 @@ export class HomeComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
-    this.users = this.mock.users;
+    //this.users = this.mock.users;
+    this.getUsers(0, 90)
   }
 
-  private async _allUsers(since:number, perPage:number){
+  private async getUsers(since:number, perPage:number){
     try {
       const resp = await this.apiService.getGeneric(`https://api.github.com/users?since=${since}&per_page=${perPage}`);
       this.users = resp;
