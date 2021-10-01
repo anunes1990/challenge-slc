@@ -16,4 +16,4 @@ Após cumprir os pré requisitos acima, rode o comando `npm i` em seu terminal p
 
 ## Demo
 
-O projeto foi hospedado na plataforma heroku em seu formato gratuito e pode ser acessado no seguinte link: .
+O projeto foi hospedado na plataforma heroku em seu formato gratuito e pode ser acessado no seguinte link: https://challenge-slc.herokuapp.com/#/
