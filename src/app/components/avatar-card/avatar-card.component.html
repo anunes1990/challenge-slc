@@ -1,0 +1,31 @@
+<div class="card-avatar">
+    <img class="avatar-thumbnail" [src]="user.avatar_url" alt="avatar do usuário">
+    <div class="info-card">
+        <p>{{user.login}}</p>
+        <div class="card-actions">
+            <p class="action" (click)="openModalInfo(user)">simple</p>
+            <p class="action">full</p>
+        </div>
+    </div>
+</div>
+
+<dialog *ngIf="userInfo" id="dialog-user" class="site-dialog">
+    <div class="close-container">
+        <span class="close-dialog" (click)="closeModalInfo()">Fechar X</span>
+    </div>
+    <div class="avatar-container">
+        <img class="avatar" [src]="userInfo.avatar_url" alt="avatar do usuário">
+    </div>
+    <div class="info-container">
+        <h3>{{userInfo.name}}</h3>
+        <span>{{userInfo.login}}</span>
+        <span>Bio</span>
+        <p>{{userInfo.bio ? userInfo.bio : "Bio não informada"}}</p>
+        <a [href]="userInfo.html_url" target="_black">GitHub</a>
+        <a [href]="'mailto:' + userInfo.email">{{userInfo.email}}</a>
+    </div>
+    <div class="custom-row git-info">
+        <span>Seguidores: {{userInfo.followers}}</span>
+        <span>Seguindo: {{userInfo.following}}</span>
+    </div>
+</dialog>

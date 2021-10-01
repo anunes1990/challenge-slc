@@ -1,0 +1,77 @@
+.card-avatar {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    margin: 5px 0px;
+}
+
+.avatar-thumbnail {
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+.info-card {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    border: solid 1px #000;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action {
+    margin: 0;
+}
+
+.action:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* Custom Dialog*/
+
+#dialog-user {
+    min-width: 400px;
+    border: transparent;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #000;
+}
+
+.close-container {
+    text-align: right;
+}
+
+.close-dialog {
+    color: #ff0000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.close-dialog:hover {
+    cursor: pointer;
+    color: #770000;
+}
+
+.avatar-container {
+    text-align: center;
+}
+
+.avatar {
+    height: 200px;
+    border-radius: 100px;
+}
+
+.info-container {
+    display: grid;
+    text-align: center;
+}
+
+.git-info {
+    display: flex;
+    justify-content: space-evenly;
+}
