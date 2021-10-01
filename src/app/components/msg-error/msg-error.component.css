@@ -1,0 +1,11 @@
+.msg-error-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 300px;
+}

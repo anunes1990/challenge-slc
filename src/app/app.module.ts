@@ -9,13 +9,15 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HomeComponent } from './pages/home/home.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { AvatarCardComponent } from './components/avatar-card/avatar-card.component';
+import { MsgErrorComponent } from './components/msg-error/msg-error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     DetailsComponent,
-    AvatarCardComponent
+    AvatarCardComponent,
+    MsgErrorComponent
   ],
   imports: [
     BrowserModule,
