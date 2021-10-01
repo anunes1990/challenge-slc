@@ -1,5 +1,6 @@
 .msg-error-container {
     width: 100%;
+    padding: 30px 0px;
     justify-content: center;
     align-items: center;
     display: flex;

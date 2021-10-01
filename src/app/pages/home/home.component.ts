@@ -27,7 +27,6 @@ export class HomeComponent implements OnInit {
   }
 
   async ngOnInit() {
-    //this.users = this.mock.users;
     this.getUsers()
   }
 
@@ -40,7 +39,7 @@ export class HomeComponent implements OnInit {
       this.searched = false;
       this.msgError = undefined;
     } catch (error:any) {
-      this.msgError = `Código do Erro : ${error.status} | Não foi possível cerregar a lista de usuários`
+      this.msgError = `Código do Erro : ${error.status} | Não foi possível carregar a lista de usuários`
       console.error("ERROR GET USERS > ", error)
     }
   }
@@ -57,7 +56,11 @@ export class HomeComponent implements OnInit {
         this.msgError = undefined;
       } catch (error:any) {
         this.submitted = false;
-        this.msgError = `Código do Erro : ${error.status} | Usuário não localizado`
+        if(error.status === 403){
+          this.msgError = `Código do Erro : ${error.status} | Não foi possível carregar as informações do usuário`
+        } else {
+          this.msgError = `Código do Erro : ${error.status} | Usuário não localizado`
+        }
         console.error("ERROR GET USERS > ", error)
       }
     }

@@ -11,7 +11,7 @@ body {
 }
 
 .content {
-    padding: 75px 150px 20px 150px;
+    padding: 75px 100px 20px 100px;
 }
 
 @media only screen and (max-width: 750px) {
@@ -68,15 +68,15 @@ form {
 }
 
 .accept-btn {
-    border-color: #008000;
-    color: #008000;
+    border-color: #006940;
+    color: #006940;
     background-color: #fff;
 }
 
 .accept-btn:hover {
-    border-color: #008000;
+    border-color: #006940;
     color: #fff;
-    background-color: #008000;
+    background-color: #006940;
 }
 
 .reject-btn {
@@ -94,4 +94,11 @@ form {
 label {
     font-weight: bold;
     margin: 5px 0px;
+}
+
+.title {
+    color: #006940;
+    border-bottom: solid;
+    text-align: center;
+    margin: 10px 0px;
 }

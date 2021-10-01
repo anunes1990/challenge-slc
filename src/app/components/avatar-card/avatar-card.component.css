@@ -26,6 +26,7 @@
     border-bottom-right-radius: 50px;
     position: relative;
     right: 25px;
+    box-shadow: 2px 2px 5px #000;
 }
 
 .card-actions {
@@ -44,10 +45,6 @@
 
 
 /* Custom Dialog*/
-
-span {
-    font-weight: normal;
-}
 
 #dialog-user {
     min-width: 400px;
@@ -69,32 +66,4 @@ span {
 .close-dialog:hover {
     cursor: pointer;
     color: #770000;
-}
-
-.avatar-container {
-    text-align: center;
-}
-
-.avatar {
-    height: 200px;
-    border-radius: 100px;
-}
-
-.info-container {
-    display: grid;
-    text-align: center;
-    margin-bottom: 5px;
-}
-
-.user-name {
-    margin-bottom: 0;
-}
-
-.user-bio {
-    margin: 5px 0px;
-}
-
-.git-info {
-    display: flex;
-    justify-content: space-evenly;
 }

@@ -13,24 +13,5 @@
     <div class="close-container">
         <span class="close-dialog" (click)="closeModalInfo()">Fechar X</span>
     </div>
-    <div class="avatar-container">
-        <img class="avatar" [src]="userInfo.avatar_url" alt="avatar do usuário">
-    </div>
-    <div class="info-container">
-        <h2 class="user-name">{{userInfo.name}}</h2>
-        <span class="user-login">({{userInfo.login}})</span>
-        <label class="label"><i class="far fa-envelope"></i> E-mail <a *ngIf="userInfo.email"
-                [href]="'mailto:' + userInfo.email">{{userInfo.email}}</a><span *ngIf="!userInfo.email"> não
-                informado</span></label>
-
-        <span class="label">Bio</span>
-        <p class="user-bio">{{userInfo.bio ? userInfo.bio : "Bio não informada"}}</p>
-        <div>
-            <a [href]="userInfo.html_url" target="_black"><i class="fab fa-github"></i> ir para o GitHub do Usuário</a>
-        </div>
-    </div>
-    <div class="custom-row git-info">
-        <label class="label"><i class="fas fa-users"></i> Seguidores: <span> {{userInfo.followers}}</span></label>
-        <label class="label"><i class="fas fa-users"></i> Seguindo: <span> {{userInfo.following}}</span></label>
-    </div>
+    <app-user-info [userInfo]="userInfo"></app-user-info>
 </dialog>

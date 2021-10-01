@@ -14,6 +14,7 @@ export class DetailsComponent implements OnInit {
   private user:any;
   public userInfo:any;
   public userRepos:any = [];
+  public msgError: string | undefined;
 
   constructor(
     private acRoute: ActivatedRoute,
@@ -25,25 +26,21 @@ export class DetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //this.getInfoUser();
-    this.userInfo = this.mockService.user;
-    this.userRepos = this.mockService.listRepos;
-
-    console.log("User INFO > ", this.userInfo)
-    console.log("User REPOS > ", this.userRepos)
-    console.log(this.utils.orderByDesc(this.userRepos, "stargazers_count"))
-
+    this.getInfoUser();
+    //this.userInfo = this.mockService.user;
+    //this.userRepos = this.utils.orderByDesc(this.mockService.listRepos, "stargazers_count");
   }
 
   private async getInfoUser(){
     try {
       const resp = await this.apiService.getGeneric(`/${this.user}`);
       this.userInfo = resp;
-      console.log("Informações User > ", this.userInfo)
+      console.log("Informações User > ", this.userInfo);
       this.getUserRepos();
-    } catch (error) {
-        console.error("ERROR GET USER INFO", error)
-    }
+    } catch (error:any) {
+        console.error("ERROR GET USER INFO", error);
+        this.msgError = `Código do Erro : ${error.status} | Não foi possível carregar as informações do usuário`;
+      }
   }
 
   private async getUserRepos(){
@@ -51,11 +48,14 @@ export class DetailsComponent implements OnInit {
       const resp = await this.apiService.getGeneric(`/${this.user}/repos`);
       if(resp.length > 0){
         this.userRepos = this.utils.orderByDesc(resp, "stargazers_count");
+        this.msgError = undefined;
+      } else {
+        this.msgError = `Este usuário não possui repositórios registrados`;
       }
-      console.log("Repos User > ", this.userRepos)
-    } catch (error) {
-        console.error("ERROR GET USER INFO", error)
+    } catch (error:any) {
+        console.error("ERROR GET USER INFO", error);
+        this.msgError = `Código do Erro : ${error.status} | Não foi possível carregar os repositórios do usuário`;
+
     }
   }
-
 }

@@ -1,0 +1,45 @@
+.avatar-container {
+    text-align: center;
+}
+
+.avatar {
+    height: 200px;
+    border-radius: 200px;
+    border: solid 3px #fff;
+    padding: 7px;
+}
+
+.avatar:hover {
+    cursor: pointer;
+    border-color: #006940;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+span {
+    font-weight: normal;
+}
+
+.user-name {
+    margin: 5px 0px;
+    width: fit-content;
+}
+
+.user-name:hover {
+    cursor: pointer;
+    color: #006940;
+}
+
+.user-bio {
+    margin: 5px 0px;
+}
+
+.git-info {
+    display: flex;
+    justify-content: space-evenly;
+}

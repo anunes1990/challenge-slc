@@ -1,6 +1,9 @@
-<div class="info-user">
-
+<div *ngIf="userInfo" class="info-user">
+    <app-user-info [userInfo]="userInfo"></app-user-info>
 </div>
-<div class="repos-user">
-
+<div *ngIf="userRepos.length > 0" class="repos-user">
+    <h2 class="title">Repositórios do Usuário</h2>
+    <app-repo-card *ngFor="let r of userRepos" [repo]="r"></app-repo-card>
 </div>
+
+<app-msg-error *ngIf="msgError" [msg]="msgError"></app-msg-error>
