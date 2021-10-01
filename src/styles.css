@@ -15,8 +15,73 @@ body {
     outline: transparent!important;
 }
 
+form {
+    display: contents;
+}
+
 .custom-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+.custom-input {
+    height: 36px;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 5px;
+    border: solid 2px #000;
+    border-radius: 50px;
+}
+
+.input-error {
+    border-color: #ff0000;
+}
+
+.msg-error {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.custom-btn {
+    width: fit-content;
+    font-size: 18px;
+    border: solid 1px;
+    padding: 8px;
+    border-radius: 50px;
+    margin: 0px 5px;
+}
+
+.custom-btn:hover {
+    cursor: pointer;
+}
+
+.accept-btn {
+    border-color: #008000;
+    color: #008000;
+    background-color: #fff;
+}
+
+.accept-btn:hover {
+    border-color: #008000;
+    color: #fff;
+    background-color: #008000;
+}
+
+.reject-btn {
+    border-color: #ff0000;
+    color: #ff0000;
+    background-color: #fff;
+}
+
+.reject-btn:hover {
+    border-color: #ff0000;
+    color: #fff;
+    background-color: #ff0000;
+}
+
+label {
+    font-weight: bold;
+    margin: 5px 0px;
 }

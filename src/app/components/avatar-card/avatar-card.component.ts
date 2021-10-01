@@ -23,7 +23,7 @@ export class AvatarCardComponent implements OnInit {
 
   public async openModalInfo(user: any) {
     try {
-      const resp = await this.apiService.getGeneric(`https://api.github.com/users/${user.login}`);
+      const resp = await this.apiService.getGeneric(`/${user.login}`);
       this.userInfo = resp;
       setTimeout(() => {
         $("#dialog-user")[0].showModal();

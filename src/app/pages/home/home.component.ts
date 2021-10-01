@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/services/api.service';
 import { MockListUsersService } from 'src/app/services/mock-list-users.service';
 
@@ -9,39 +10,56 @@ import { MockListUsersService } from 'src/app/services/mock-list-users.service';
 })
 export class HomeComponent implements OnInit {
 
-  public user: any;
+  public form: FormGroup;
   public users: any = [];
+  public submitted:boolean = false;
+  public searched:boolean = false;
+  public msgError: string | undefined;
 
   constructor(
     private apiService: ApiService,
     private mock: MockListUsersService,
-  ) { }
+    private formBuilder: FormBuilder
+  ) {
+    this.form = this.formBuilder.group({
+      user: [null, Validators.required]
+    });
+  }
 
   async ngOnInit() {
     //this.users = this.mock.users;
-    this.getUsers(0, 90)
+    this.getUsers()
   }
 
-  private async getUsers(since:number, perPage:number){
+  public async getUsers(since: number = 0, perPage: number = 90) {
+    this.searched = false;
+    this.form.patchValue({user : null})
     try {
-      const resp = await this.apiService.getGeneric(`https://api.github.com/users?since=${since}&per_page=${perPage}`);
+      const resp = await this.apiService.getGeneric(`?since=${since}&per_page=${perPage}`);
       this.users = resp;
-      console.log("Usuário > ", this.user)
-    } catch (error) {
+      this.searched = false;
+      this.msgError = undefined;
+    } catch (error:any) {
+      this.msgError = `Código do Erro : ${error.status} | Não foi possível cerregar a lista de usuários`
       console.error("ERROR GET USERS > ", error)
     }
   }
 
-  public async getUser(user: string) {
-    try {
-      const resp = await this.apiService.getGeneric(`https://api.github.com/users/${user}`);
-      this.user = resp;
-      console.log("Usuário > ", this.user)
-    } catch (error) {
-      console.error("ERROR GET USERS > ", error)
+  public async getUser() {
+    this.submitted = true;
+    if(this.form.valid){ 
+      this.users = [];
+      this.searched = true;
+      try {
+        const resp = await this.apiService.getGeneric(`/${this.form.get("user")?.value}`);
+        this.users.push(resp);        
+        this.submitted = false;
+        this.msgError = undefined;
+      } catch (error:any) {
+        this.submitted = false;
+        this.msgError = `Código do Erro : ${error.status} | Usuário não localizado`
+        console.error("ERROR GET USERS > ", error)
+      }
     }
   }
-
-
-
 }
