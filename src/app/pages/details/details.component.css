@@ -6,3 +6,16 @@
     width: 100%;
     padding: 25px 0px;
 }
+
+.serch-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #ffff00;
+    box-shadow: 2px 0px 5px #000;
+    padding: 10px;
+}

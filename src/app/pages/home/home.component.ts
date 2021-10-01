@@ -56,10 +56,10 @@ export class HomeComponent implements OnInit {
         this.msgError = undefined;
       } catch (error:any) {
         this.submitted = false;
-        if(error.status === 403){
-          this.msgError = `Código do Erro : ${error.status} | Não foi possível carregar as informações do usuário`
+        if(error.status === 404){
+          this.msgError = `Código do Erro : ${error.status} | Usuário não localizado ou inexistente`
         } else {
-          this.msgError = `Código do Erro : ${error.status} | Usuário não localizado`
+          this.msgError = `Código do Erro : ${error.status} | Não foi possível carregar as informações do usuário`
         }
         console.error("ERROR GET USERS > ", error)
       }
