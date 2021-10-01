@@ -1,0 +1,16 @@
+.tag {
+    display: flex;
+    border: solid 1px #000;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px #000;
+    width: fit-content;
+    color: #006940;
+}
+
+i {
+    padding-right: 5px;
+    margin-right: 5px;
+    border-right: solid 1px #000;
+}

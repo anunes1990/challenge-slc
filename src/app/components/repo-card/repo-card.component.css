@@ -1,0 +1,23 @@
+.card-repo {
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    vertical-align: center;
+    border-bottom: solid 2px #006940;
+}
+
+.repo-name {
+    width: fit-content;
+    margin: 5px 0px;
+}
+
+.repo-name:hover {
+    cursor: pointer;
+    color: #006940;
+}
+
+.repo-full-name {
+    font-size: 13px;
+    margin-left: 5px;
+}

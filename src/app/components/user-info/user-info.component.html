@@ -1,0 +1,17 @@
+<div class="avatar-container">
+    <img class="avatar" [src]="userInfo.avatar_url" alt="avatar do usuário" (click)="goToPerfil()" title="Ir para o perfil no GitHub">
+</div>
+<div class="info-container">
+    <h2 class="user-name" (click)="goToPerfil()" title="Ir para o perfil no GitHub">{{userInfo.name}} <i class="fab fa-github"></i></h2>
+    <span class="user-login">({{userInfo.login}})</span>
+    <label class="label"><i class="far fa-envelope"></i> E-mail <a *ngIf="userInfo.email"
+            [href]="'mailto:' + userInfo.email">{{userInfo.email}}</a><span *ngIf="!userInfo.email"> não
+            informado</span></label>
+
+    <label class="label"><i class="fas fa-user"></i> Bio</label>
+    <p class="user-bio">{{userInfo.bio ? userInfo.bio : "Bio não informada"}}</p>
+</div>
+<div class="custom-row git-info">
+    <app-info-tags icon="fas fa-users" text="Seguidores: " [value]="userInfo.followers"></app-info-tags>
+    <app-info-tags icon="fas fa-users" text="Seguindo: " [value]="userInfo.following"></app-info-tags>
+</div>

@@ -10,6 +10,16 @@ body {
     /* background-color: #efefef; */
 }
 
+.content {
+    padding: 75px 100px 20px 100px;
+}
+
+@media only screen and (max-width: 750px) {
+    .content {
+        padding: 75px 20px 20px 20px;
+    }
+}
+
 *:focus {
     box-shadow: none!important;
     outline: transparent!important;
@@ -30,7 +40,7 @@ form {
     font-size: 20px;
     padding: 5px 10px;
     margin: 5px;
-    border: solid 2px #000;
+    border: solid 2px #006940;
     border-radius: 50px;
 }
 
@@ -58,15 +68,15 @@ form {
 }
 
 .accept-btn {
-    border-color: #008000;
-    color: #008000;
+    border-color: #006940;
+    color: #006940;
     background-color: #fff;
 }
 
 .accept-btn:hover {
-    border-color: #008000;
+    border-color: #006940;
     color: #fff;
-    background-color: #008000;
+    background-color: #006940;
 }
 
 .reject-btn {
@@ -82,6 +92,14 @@ form {
 }
 
 label {
+    color: #006940;
     font-weight: bold;
     margin: 5px 0px;
+}
+
+.title {
+    color: #006940;
+    border-bottom: solid;
+    text-align: center;
+    margin: 10px 0px;
 }

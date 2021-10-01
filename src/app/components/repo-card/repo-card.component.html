@@ -1,0 +1,4 @@
+<div class="card-repo">
+    <h3 class="repo-name" (click)="goToRepo()"><i class="fab fa-github"></i> {{repo.name}}<span class="repo-full-name">({{repo.full_name}})</span></h3>
+    <app-info-tags icon="fas fa-star" text="Estrelas: " [value]="repo.stargazers_count"></app-info-tags>
+</div>

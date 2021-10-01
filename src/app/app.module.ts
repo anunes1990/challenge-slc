@@ -10,6 +10,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { AvatarCardComponent } from './components/avatar-card/avatar-card.component';
 import { MsgErrorComponent } from './components/msg-error/msg-error.component';
+import { HeaderComponent } from './components/header/header.component';
+import { UserInfoComponent } from './components/user-info/user-info.component';
+import { RepoCardComponent } from './components/repo-card/repo-card.component';
+import { InfoTagsComponent } from './components/info-tags/info-tags.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { MsgErrorComponent } from './components/msg-error/msg-error.component';
     HomeComponent,
     DetailsComponent,
     AvatarCardComponent,
-    MsgErrorComponent
+    MsgErrorComponent,
+    HeaderComponent,
+    UserInfoComponent,
+    RepoCardComponent,
+    InfoTagsComponent
   ],
   imports: [
     BrowserModule,
