@@ -9,8 +9,12 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: "details",
+    path: "details/:login",
     component: DetailsComponent
+  },
+  {
+    path: '**',
+    redirectTo: ''
   }
 ];
 

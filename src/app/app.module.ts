@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { AvatarCardComponent } from './components/avatar-card/avatar-card.component';
 import { MsgErrorComponent } from './components/msg-error/msg-error.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MsgErrorComponent } from './components/msg-error/msg-error.component';
     HomeComponent,
     DetailsComponent,
     AvatarCardComponent,
-    MsgErrorComponent
+    MsgErrorComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

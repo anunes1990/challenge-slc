@@ -4,7 +4,7 @@
         <h3 class="user-login">{{user.login}}</h3>
         <div class="card-actions">
             <p class="action" (click)="openModalInfo(user)">Descrição Breve</p>
-            <p class="action">Descrição Completa</p>
+            <p class="action" (click)="openGoToDetails(user.login)">Descrição Completa</p>
         </div>
     </div>
 </div>

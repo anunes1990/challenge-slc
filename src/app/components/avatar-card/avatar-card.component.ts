@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 import { MockListUsersService } from 'src/app/services/mock-list-users.service';
 declare var $: any;
@@ -15,6 +16,7 @@ export class AvatarCardComponent implements OnInit {
 
   constructor(
     private apiService: ApiService,
+    private router: Router,
     private mockService: MockListUsersService
   ) { }
 
@@ -40,6 +42,10 @@ export class AvatarCardComponent implements OnInit {
   public closeModalInfo(){
     this.userInfo = null;
     $("#dialog-user")[0].close();
+  }
+
+  public openGoToDetails(login:string) {
+    this.router.navigate(["/details", login])
   }
 
 }
