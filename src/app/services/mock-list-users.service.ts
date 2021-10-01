@@ -190,4 +190,39 @@ export class MockListUsersService {
     }
   ]
 
+  public user = {
+    "login": "anunes1990",
+    "id": 18381452,
+    "node_id": "MDQ6VXNlcjE4MzgxNDUy",
+    "avatar_url": "https://avatars.githubusercontent.com/u/18381452?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/anunes1990",
+    "html_url": "https://github.com/anunes1990",
+    "followers_url": "https://api.github.com/users/anunes1990/followers",
+    "following_url": "https://api.github.com/users/anunes1990/following{/other_user}",
+    "gists_url": "https://api.github.com/users/anunes1990/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/anunes1990/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/anunes1990/subscriptions",
+    "organizations_url": "https://api.github.com/users/anunes1990/orgs",
+    "repos_url": "https://api.github.com/users/anunes1990/repos",
+    "events_url": "https://api.github.com/users/anunes1990/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/anunes1990/received_events",
+    "type": "User",
+    "site_admin": false,
+    "name": "Allisson Nunes Dedigo",
+    "company": null,
+    "blog": "https://www.linkedin.com/in/allisson-leandro-nunes-dedigo-74723a98/",
+    "location": null,
+    "email": null,
+    "hireable": null,
+    "bio": "Desenvolvedor Web e Mobile",
+    "twitter_username": null,
+    "public_repos": 6,
+    "public_gists": 0,
+    "followers": 1,
+    "following": 6,
+    "created_at": "2016-04-10T16:25:55Z",
+    "updated_at": "2021-06-18T19:05:19Z"
+    }
+
 }

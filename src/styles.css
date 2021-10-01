@@ -10,6 +10,11 @@ body {
     /* background-color: #efefef; */
 }
 
+*:focus {
+    box-shadow: none!important;
+    outline: transparent!important;
+}
+
 .custom-row {
     display: flex;
     flex-wrap: wrap;

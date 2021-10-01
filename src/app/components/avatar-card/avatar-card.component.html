@@ -17,15 +17,20 @@
         <img class="avatar" [src]="userInfo.avatar_url" alt="avatar do usuário">
     </div>
     <div class="info-container">
-        <h3>{{userInfo.name}}</h3>
-        <span>{{userInfo.login}}</span>
-        <span>Bio</span>
-        <p>{{userInfo.bio ? userInfo.bio : "Bio não informada"}}</p>
-        <a [href]="userInfo.html_url" target="_black">GitHub</a>
-        <a [href]="'mailto:' + userInfo.email">{{userInfo.email}}</a>
+        <h2 class="user-name">{{userInfo.name}}</h2>
+        <span class="user-login">({{userInfo.login}})</span>
+        <label class="label"><i class="far fa-envelope"></i> E-mail <a *ngIf="userInfo.email"
+                [href]="'mailto:' + userInfo.email">{{userInfo.email}}</a><span *ngIf="!userInfo.email"> não
+                informado</span></label>
+
+        <span class="label">Bio</span>
+        <p class="user-bio">{{userInfo.bio ? userInfo.bio : "Bio não informada"}}</p>
+        <div>
+            <a [href]="userInfo.html_url" target="_black"><i class="fab fa-github"></i> ir para o GitHub do Usuário</a>
+        </div>
     </div>
     <div class="custom-row git-info">
-        <span>Seguidores: {{userInfo.followers}}</span>
-        <span>Seguindo: {{userInfo.following}}</span>
+        <label class="label"><i class="fas fa-users"></i> Seguidores: <span> {{userInfo.followers}}</span></label>
+        <label class="label"><i class="fas fa-users"></i> Seguindo: <span> {{userInfo.following}}</span></label>
     </div>
 </dialog>
