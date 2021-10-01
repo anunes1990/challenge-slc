@@ -14,6 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { UserInfoComponent } from './components/user-info/user-info.component';
 import { RepoCardComponent } from './components/repo-card/repo-card.component';
 import { InfoTagsComponent } from './components/info-tags/info-tags.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { InfoTagsComponent } from './components/info-tags/info-tags.component';
     HeaderComponent,
     UserInfoComponent,
     RepoCardComponent,
-    InfoTagsComponent
+    InfoTagsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
-import { MockListUsersService } from 'src/app/services/mock-list-users.service';
 import { UtilsService } from 'src/app/services/utils.service';
 
 @Component({
@@ -22,7 +21,6 @@ export class DetailsComponent implements OnInit {
   constructor(
     private acRoute: ActivatedRoute,
     private apiService: ApiService,
-    private mockService: MockListUsersService,
     private utils: UtilsService,
     private formBuilder: FormBuilder,
     private router: Router

@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
-import { MockListUsersService } from 'src/app/services/mock-list-users.service';
 declare var $: any;
 
 @Component({
@@ -16,8 +15,7 @@ export class AvatarCardComponent implements OnInit {
 
   constructor(
     private apiService: ApiService,
-    private router: Router,
-    private mockService: MockListUsersService
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -31,7 +29,6 @@ export class AvatarCardComponent implements OnInit {
         $("#dialog-user")[0].showModal();
       }, 100);
     } catch (error) {
-      this.userInfo = this.mockService;
       setTimeout(() => {
         $("#dialog-user")[0].showModal();
       }, 100);
